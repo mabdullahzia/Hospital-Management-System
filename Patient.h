@@ -1,17 +1,21 @@
 #ifndef PATIENT_H
 #define PATIENT_H
-#include <string>
+#include<string>
 using namespace std;
 
-class Patient {
-public:
+class Patient{
+private:
     int id;
     string name;
     int age;
-    string department;
+    string dept;
     string disease;
+public:
+    Patient(int i,string n,int a,string d,string dis);
+    void display() const;
 
-    Patient(int i, string n, int a, string dpt, string dis);
+    int getId() const{return id;}
+    string getDept() const{return dept;}
 };
 
 #endif
